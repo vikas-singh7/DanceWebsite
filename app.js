@@ -4,7 +4,8 @@ const fs = require("fs");
 const app = express();
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/contactDance', { useNewUrlParser: true });
-const port = 8000;
+const port = process.env.PORT || 8000;
+console.log(port)
 const bodyparser=require("body-parser");
 
 //Define mongoose schema
